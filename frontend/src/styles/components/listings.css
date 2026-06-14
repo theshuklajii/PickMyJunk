@@ -1,0 +1,26 @@
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .listing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.defect-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--surface-soft);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.defect-fill {
+  height: 100%;
+  background: var(--error);
+  width: var(--defect-percentage, 0%); /* Use the percentage variable */
+  transition: width 1s ease-out; /* Smooth animation */
+}
